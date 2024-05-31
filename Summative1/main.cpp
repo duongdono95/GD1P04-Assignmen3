@@ -357,7 +357,7 @@ void Render() {
     sphereModelRight->Render(Texture_Acient_World, SphereMVPRight, 0); // No texture needed
 
     // Render ship model with texture and reflection
-    glm::mat4 ShipModelMat = glm::translate(glm::mat4(1.0f), shipPosition) * glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+    glm::mat4 ShipModelMat = glm::translate(glm::mat4(1.0f), shipPosition) * glm::scale(glm::mat4(0.05f), glm::vec3(0.05f));
     glm::mat4 ShipMVP = ProjectionMat * ViewMat * ShipModelMat;
     glm::mat4 ShipNormalMatrix = glm::transpose(glm::inverse(ShipModelMat));
 
